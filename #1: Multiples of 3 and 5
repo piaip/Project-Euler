@@ -1,0 +1,27 @@
+function main() {
+    var t = parseInt(readLine()); //console.log(t+">>");
+    var list = "3,5";
+    var multipler = [];
+    var sum = 0;
+    var condition = "false";
+        
+    list = list.split(",");
+    for(var m=0; m<list.length; m++){
+        multipler.push(list[m]); //console.log(multipler);
+    }
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine()); //console.log(n+"??");
+        for(var i=1; i<n; i++){
+            for(var j=0; j<multipler.length; j++){
+                if(i % multipler[j] == 0){
+                    condition = "true";
+                }
+            }       
+            if(condition == "true"){
+                sum = sum + i;
+                //console.log(i); 
+            }condition = "false";
+        }
+        console.log(sum); sum=0;
+    }
+}
