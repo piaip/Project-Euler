@@ -1,0 +1,19 @@
+function run(n){
+    var sumnatural = 0;
+    var sumsquare = 0, sumnum = 0;
+    for(var i=1; i<=n; i++){
+        sumnatural += Math.pow(i,2);
+        sumnum += i;
+    }
+    sumsquare = Math.pow(sumnum,2);
+    return (sumsquare - sumnatural);
+}
+
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        console.log(run(n));
+    }
+
+}
