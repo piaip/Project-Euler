@@ -1,0 +1,49 @@
+    var arr = [], arr2 = [];
+    var limitarr = 100;
+function isPalindrome(no){
+    var a,no,b,temp=0;
+    b=no;
+    while(no>0){
+        a=no%10;
+        no=parseInt(no/10);
+        temp=temp*10+a;
+    }
+    if(temp==b){         
+        return true;
+    }else{
+        return false;
+    }
+}
+function loopnum(n){  
+    for(var i=n; i<=n; i--){  
+        if(arr.length > limitarr) {break;}
+        if(isPalindrome(i) == true){
+            arr.push(i);
+        }
+    }   
+}
+function largestpalindrome(num){
+    var n = parseInt(num), p=999, q=99;
+    arr = []; arr2 = [];
+    loopnum(n);
+    for(var a=p; a>q; a--){
+        for(var b=p; b>q; b--){
+                var mul = a*b;
+            for(var c=0; c<arr.length; c++){
+                if(arr[c] === mul){
+                    arr2.push(mul);
+                }
+            }
+        }
+    }
+    var palin = Math.max.apply(null, arr2);
+    return palin;
+}
+    
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        console.log(largestpalindrome(n));
+    }
+}
