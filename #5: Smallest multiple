@@ -1,0 +1,24 @@
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        var y = 0;  
+        var l = n;  
+        for (var i = l; i>y; i += l) {  
+          for (var j = 2; j < l; j++) {
+            if (i % j == 0) {  
+              y = 1;  
+            }  
+            else {  
+              y = 0;  
+              break;  
+            }    
+              //console.log(i+"/"+j+"|"+y);
+          }  
+          if (y) {  
+            console.log(i);  
+            break;  
+          }  
+        }
+    }
+}
