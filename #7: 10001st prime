@@ -1,0 +1,17 @@
+function main() {
+    var t = parseInt(readLine());
+    var arr = [];
+    for(var j=0; j<=1e+3; j++){
+        if(isPrime(j)) arr.push(j);
+    }
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        console.log(arr[n]);
+    }
+    console.log(arr);
+}
+function isPrime(num){
+    for(var i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false; 
+    return num !== 1;
+}
