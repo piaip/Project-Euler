@@ -1,3 +1,15 @@
+/*
+Sample Input 0
+2
+101110
+800000
+Sample Output 0
+101101
+793397
+Explanation 0
+101101 is product of 143 and 707.
+793397 is product of 869 and 913.
+*/    
     var arr = [], arr2 = [];
     var limitarr = 100;
 function isPalindrome(no){
