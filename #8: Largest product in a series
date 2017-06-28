@@ -1,0 +1,36 @@
+/*
+Sample Input 0
+2
+10 5
+3675356291
+10 5
+2709360626
+Sample Output 0
+3150
+0
+Explanation 0
+For 3675356291 and selecting K=5 consequetive digits, we have 36753, 67535, 7535, 53562, 35629 and 56291. Where  gives maximum product as 
+For 2709360626, 0 lies in all selection of 5 consequetive digits hence maximum product remains 0
+*/
+
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n_temp = readLine().split(' ');
+        var n = parseInt(n_temp[0]);
+        var k = parseInt(n_temp[1]);
+        var num = readLine();
+        //console.log(n+""+k+""+num);
+        var greatestProduct = 0;
+        for (var i = 0; i + k <= num.length; i++) {
+              var product = charSequence.reduce(function (memo, value) {
+                  return memo *= value;
+              });
+              if (product > greatestProduct) {
+                greatestProduct = product;
+              }
+        }
+        console.log(greatestProduct);
+    }
+
+}
