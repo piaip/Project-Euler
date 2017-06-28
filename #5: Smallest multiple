@@ -1,3 +1,16 @@
+/*
+Sample Input 0
+2
+3
+10
+Sample Output 0
+6
+2520
+Explanation 0
+You can check 6 is divisible by each of {1,2,3}, giving quotient of {6,3,2} respectively.
+You can check 2520 is divisible by each of {1,2,3,4,5,6,7,8,9,10} giving quotient of {2520,1260,840,630,504,420,360,315,280,252} respectively.
+*/
+
 function main() {
     var t = parseInt(readLine());
     for(var a0 = 0; a0 < t; a0++){
