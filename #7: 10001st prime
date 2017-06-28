@@ -1,3 +1,17 @@
+/*
+Sample Input 0
+2
+3
+6
+Sample Output 0
+5
+13
+Explanation 0
+The first 10 prime numbers are
+    {2,3,5,7,11,13,17,19,23,29}
+we can see that 3rd prime number is 5 and 6th prime number is 13 
+*/
+
 function main() {
     var t = parseInt(readLine());
     var arr = [];
