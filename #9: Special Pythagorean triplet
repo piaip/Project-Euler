@@ -1,0 +1,52 @@
+/*
+Sample Input 0
+2
+12
+4
+Sample Output 0
+60
+-1
+Explanation 0
+For N=12, we have a triplet {3,4,5}, whose product is 60.
+For N=4, we don't have any pythagorean triple.
+*/
+
+function check(p){
+    var a, b, c;
+    var sqrt = Math.sqrt(p);
+    //console.log(sqrt);
+    for (var n = 1; n <= sqrt; n++) {
+        for (var m = n+1; m <= sqrt; m++) {
+            a = m*m - n*n;
+            b = 2*m*n;
+            c = m*m + n*n;
+            if ( a + b + c == p ) { 
+                return a * b * c;
+            }
+        }
+    }
+    return -1;
+}
+
+function check2(p){
+    var a, b, c, temp;
+    var t=Math.sqrt(3000);
+    for(a = 1.0; a < t; a++){
+        for(b = 1.0; b < t; b++){
+            temp = a*a + b*b;
+            c = Math.sqrt(temp);
+            if (a+b+c == p) return a*b*c;
+        }
+    }
+    return -1;
+}
+
+
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine()); 
+        console.log(check2(n));
+    }
+
+}
