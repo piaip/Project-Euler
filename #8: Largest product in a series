@@ -23,6 +23,7 @@ function main() {
         //console.log(n+""+k+""+num);
         var greatestProduct = 0;
         for (var i = 0; i + k <= num.length; i++) {
+            var charSequence = num.slice(i, i + k).split('');
               var product = charSequence.reduce(function (memo, value) {
                   return memo *= value;
               });
