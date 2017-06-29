@@ -1,0 +1,38 @@
+ /*
+ Sample Input 0
+2
+5
+10
+Sample Output 0
+10
+17
+Explanation 0
+For N=5, we have primes as {2,3,5} and the sum is .
+For N=10, we have primes as {2,3,5,7} and the sum is .
+ */
+ 
+ function isPrime(num){
+     for(var i = 2, s = Math.sqrt(num); i <= s; i++)
+         if(num % i === 0) return false; 
+     return num !== 1;
+ }
+
+function main() {
+    var t = parseInt(readLine());
+    var arr = [];
+    var sum = 0;
+    for(var i=0; i<1e+4; i++){
+        if(isPrime(i)){
+            arr.push(i);
+        }
+    } 
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        sum = 0;
+        for(var j=0; j<arr.length; j++){
+            if(arr[j] <= n) sum+=arr[j];
+        }
+        console.log(sum);
+    }
+
+}
